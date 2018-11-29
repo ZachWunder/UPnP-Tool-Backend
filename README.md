@@ -1,5 +1,13 @@
 # UPnP Tool Backend Documentation
 
+## What is this?
+
+The backend for the UPnP-Tool.
+
+## Setup
+
+Clone repository, then run "npm start" to launch.
+
 ## Routes:
 
 - GET /getDevices

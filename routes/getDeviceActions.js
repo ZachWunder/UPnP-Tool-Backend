@@ -3,12 +3,10 @@ const router = express.Router();
 
 const getDeviceActions = require("../resources/deviceInfo").getDeviceActions;
 
+router.get('/:SCPDURL', async (req, res, next) => {
+    const SCPDURL = req.params.SCPDURL;
 
-/* GET home page. */
-router.get('/:URL', async (req, res, next) => {
-    const URL = req.params.URL;
-
-    const deviceServices = await getDeviceServices(URL);
+    const deviceServices = await getDeviceServices(SCPDURL);
 
     // SAVE TO CACHE
 
