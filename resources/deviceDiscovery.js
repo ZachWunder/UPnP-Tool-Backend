@@ -50,7 +50,7 @@ const discoverDevices = () => {
 // Parse device location from msearch
 // RETURNS: Array of device URL's
 const getDeviceURLs = () => {
-    return new Promise(async function(resolve, reject) {
+    return new Promise(async (resolve, reject) => {
         try {
             const devices = await discoverDevices();
             let locations = [];

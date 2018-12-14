@@ -1,4 +1,5 @@
 const xmlParser = require("xml2json");
+const fetch = require("node-fetch");
 
 const getDeviceURLs = require("./deviceDiscovery");
 
@@ -45,7 +46,6 @@ const getDeviceBodyByURL = url => {
 const getAllDeviceInfo = () => {
     return new Promise(async function(resolve, reject) {
         try {
-            console.log("getAllDeviceInfo called");
             const devices = await getAllDeviceBody();
 
             let deviceInfo = [];
