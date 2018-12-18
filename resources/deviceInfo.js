@@ -42,6 +42,27 @@ const getDeviceBodyByURL = url => {
     });
 };
 
+const getDeviceInfo = URL => {
+    return new Promise( async (resolve, reject) => {
+        try {
+            const device = await getDeviceBodyByURL(URL);
+
+            resolve({
+                MACAddress: device.macAddress,
+                SerialNumber: device.serialNumber,
+                FirmwareVersion: device.firmwareVersion,
+                UDN: device.UDN,
+                DeviceType: device.deviceType,
+                Name: device.friendlyName,
+                URL: device.url,
+                SetupURL: device.setupURL
+            })
+        } catch (e) {
+            reject(e)
+        }
+    })
+}
+
 //RETURNS: Array of Device Objects
 const getAllDeviceInfo = () => {
     return new Promise(async function(resolve, reject) {
@@ -110,6 +131,7 @@ const getServiceActions = SCPDURL => {
 };
 
 module.exports = {
+    getDeviceInfo: getDeviceInfo,
     getAllDeviceInfo: getAllDeviceInfo,
     getDeviceServices: getDeviceServices,
     getServiceActions: getServiceActions

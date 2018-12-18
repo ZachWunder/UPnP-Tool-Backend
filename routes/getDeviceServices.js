@@ -5,9 +5,8 @@ const getDeviceServices = require("../resources/deviceInfo").getDeviceServices;
 
 router.get('/:URL', async (req, res, next) => {
     const URL = req.params.URL;
-
     const deviceServices = await getDeviceServices(URL);
-
+    console.log(deviceServices)
     // SAVE TO CACHE
 
     res.json({

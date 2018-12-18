@@ -3,8 +3,8 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-const indexRouter = require('./routes/index');
-const getDevicesRouter = require('./routes/getDevices');
+const getDeviceInfoRouter = require('./routes/getDeviceInfo');
+const getAllDevicesRouter = require('./routes/getAllDevices');
 const getDeviceServicesRouter = require('./routes/getDeviceServices');
 
 
@@ -26,8 +26,8 @@ app.use(function(req, res, next) {
 
 
 // ROUTES:
-app.use('/', indexRouter);
-app.use('/getDevices', getDevicesRouter);
+app.use('/getDeviceInfo', getDeviceInfoRouter);
+app.use('/getAllDevices', getAllDevicesRouter);
 app.use('/getDeviceServices', getDeviceServicesRouter);
 
 
