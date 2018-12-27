@@ -1,17 +1,16 @@
 const express = require('express');
 const router = express.Router();
 
-const getDeviceActions = require("../resources/deviceInfo").getDeviceActions;
+const getServiceActions = require("../resources/Services").getServiceActions;
 
 router.get('/:SCPDURL', async (req, res, next) => {
     const SCPDURL = req.params.SCPDURL;
 
-    const deviceServices = await getDeviceServices(SCPDURL);
-
-    // SAVE TO CACHE
+    const actions = await getServiceActions(SCPDURL);
+    console.log(actions);
 
     res.json({
-        deviceServices: deviceServices
+        actions: actions
     });
 
 });

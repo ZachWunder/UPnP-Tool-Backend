@@ -6,6 +6,7 @@ const logger = require('morgan');
 const getDeviceInfoRouter = require('./routes/getDeviceInfo');
 const getAllDevicesRouter = require('./routes/getAllDevices');
 const getDeviceServicesRouter = require('./routes/getDeviceServices');
+const getServiceActionsRouter = require('./routes/getServiceActions');
 
 
 const app = express();
@@ -29,6 +30,7 @@ app.use(function(req, res, next) {
 app.use('/getDeviceInfo', getDeviceInfoRouter);
 app.use('/getAllDevices', getAllDevicesRouter);
 app.use('/getDeviceServices', getDeviceServicesRouter);
+app.use('/getServiceActions', getServiceActionsRouter);
 
 
 module.exports = app;

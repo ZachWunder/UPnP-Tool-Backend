@@ -14,13 +14,6 @@ router.get('/', async (req, res, next) => {
     } catch (e) {
         console.log(e);
     }
-
-    /* const devices = [{Name: "First Device", FirmwareVersion: "V3.0.2", UDN: "8762349", URL: "http://192.169.1.104"},
-                      {Name: "Second Device", FirmwareVersion: "V3.0.2", UDN: "0234598", URL: "http://192.169.1.104"}] */
-    // SAVE TO CACHE
-
-
-
 });
 
 module.exports = router;
