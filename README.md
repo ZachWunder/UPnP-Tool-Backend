@@ -6,7 +6,9 @@ The backend for the UPnP-Tool.
 
 ## Setup
 
-Clone repository, then run "npm start" to launch.
+1. Clone repository
+2. Move to directory, then run "npm install"
+3. To start development environment, run "npm start"
 
 ## Routes:
 
